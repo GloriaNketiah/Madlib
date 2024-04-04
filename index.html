@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <title>Madlib with Forms</title>
   <link href="style.css" rel="stylesheet"  />
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
+
+
 </head>
 
 <body>
@@ -40,9 +44,27 @@
     <br>
     
     <button type="button" onclick="printMadlib()">View Madlib</buttton>
+      <!-- JS for Firebase -->
+	<script type="module">
+  	// setup firebase app and firestore database
+  	import { getFirestore } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+  	const firebaseConfig = {
+    apiKey: "AIzaSyCIrQHwpBMFP57kKA75RUQtgnQ6REBmEPA",
+    authDomain: "madlibs-6db5e.firebaseapp.com",
+    projectId: "madlibs-6db5e",
+    storageBucket: "madlibs-6db5e.appspot.com",
+    messagingSenderId: "529399707262",
+    appId: "1:529399707262:web:2338159ce715f1341e0a2f"
+  };
+  	const app = firebase.initializeApp(firebaseConfig);
+  	var db = getFirestore(app);
+  	console.log("firebase setup complete!");
+	</script>
+	<script src="script.js"></script>
+
     
       
-      <script src="script.js"></script>
+     
 
 </body>
      
