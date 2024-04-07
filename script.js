@@ -9,4 +9,21 @@ var sentence = "<p>" + "The law of inertia; also known as <i>" + noun + "</i> th
   document.getElementById("output").innerHTML = sentence;
 }
 
+var story = document.getElementById("story").innerHTML;
+console.log("story: " + story);
+
+var storyData = {
+  timestamp: Date.now(),
+  story: story,
+  noun: noun,
+  adjective: adjective,
+  verb: verb,
+  verb_2: verb_2,
+  sentence: sentence,
+
+  var storyJSON = JSON.stringify(storyData);
+  console.log("storyJSON: " + storyJSON);
+  return storyJSON;
+  
+};
 
