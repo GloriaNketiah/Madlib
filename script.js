@@ -7,7 +7,7 @@ var sentence = "<p>" + "The law of inertia; also known as <i>" + noun + "</i> th
 
 
   document.getElementById("output").innerHTML = sentence;
-}
+
 
 var story = document.getElementById("story").innerHTML;
 console.log("story: " + story);
@@ -26,3 +26,5 @@ var storyData = {
 var storyJSON = JSON.stringify(storyData);
 console.log("storyJSON: " + storyJSON);
 return storyJSON;
+
+}
