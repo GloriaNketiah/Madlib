@@ -21,9 +21,8 @@ var storyData = {
   verb_2: verb_2,
   sentence: sentence,
 
-  var storyJSON = JSON.stringify(storyData);
-  console.log("storyJSON: " + storyJSON);
-  return storyJSON;
-  
 };
 
+var storyJSON = JSON.stringify(storyData);
+console.log("storyJSON: " + storyJSON);
+return storyJSON;
