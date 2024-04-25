@@ -38,28 +38,22 @@
      <label for="verb_2">Verb_2</label>
      <input type="text" id="verb_2" name="verb_2" placeholder="Enter a verb">
      <br>
+     <label for="Namemadlib">Namemadlib</label>
+     <input type="text" id="Namemadlib" name="Namemadlib" placeholder="Enter a name for your madlib">
      <br>
-    
    </form>
     <br>
     
     <button type="button" onclick="printMadlib()">View Madlib</buttton>
-      <!-- JS for Firebase -->
-	<script type="module">
-  	// setup firebase app and firestore database
-  	import { getFirestore } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
-  	const firebaseConfig = {
-    apiKey: "AIzaSyCIrQHwpBMFP57kKA75RUQtgnQ6REBmEPA",
-    authDomain: "madlibs-6db5e.firebaseapp.com",
-    projectId: "madlibs-6db5e",
-    storageBucket: "madlibs-6db5e.appspot.com",
-    messagingSenderId: "529399707262",
-    appId: "1:529399707262:web:2338159ce715f1341e0a2f"
-  };
-  	const app = firebase.initializeApp(firebaseConfig);
-  	var db = getFirestore(app);
-  	console.log("firebase setup complete!");
-	</script>
+
+    <button id="saveButton" type="button" onclick="saveMadlib()"> save story</button>
+    <br>
+    <button id="retrieveMadlib" type="button" onclick="retrieveMadlib()"> retrieve story</button>
+    <br>
+    <button id="editMadlib" type="button" onclick="editMadlib()"> edit story</button>
+    <br>
+    <button id="deleteMadlib" type="button" onclick="deleteMadlib()"> delete story</button>
+      
 	<script src="script.js"></script>
 
     
