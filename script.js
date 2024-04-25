@@ -19,6 +19,7 @@ var adjective = document.getElementById("adjective").value;
 var verb = document.getElementById("verb").value;
 var verb_2 = document.getElementById("verb_2").value;
 var sentence = "<p>" + "The law of inertia; also known as <i>" + noun + "</i> third law of motion is most <i>" + adjective  + "</i> in everyday life. It states that action and reaction are equal and opposite. This means that if an object is <i>" + verb + "</i> against a wall, it will <i>" + verb_2 + "</i> back with an equal force in the opposite direction." + "</p>";
+}
 
 function saveMadlib() {
   console.log("saveMadlib() called ");
@@ -29,7 +30,7 @@ db.collection("madlibs").doc(storyData.storyName).set(storyData);
 
 function retriveMadlib() {
   console.log("retriveMadlib() called ");
-  var storyName = promp ("Enter the name of the story you want to look up: ");
+  var storyName = prompt("Enter the name of the story you want to look up: ");
   db.collection("madlibs")
     .doc(storyName)
     .get()
